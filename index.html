@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathLog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow">MathLog</p>
+            <h1>Math Study Schedule Creator</h1>
+            <p class="tagline">A guided study planner with three AI agents and student-approved handoffs.</p>
+          </div>
+          <div class="hero-illustrations" aria-hidden="true">
+            <span>🧮</span>
+            <span>📚</span>
+            <span>✨</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Study Intake</h2>
+            <div id="agentBadge" class="badge badge-agent">Agent 1 • Level Finder</div>
+          </div>
+
+          <div id="questionCard" class="question-card">
+            <div id="questionLabel" class="question-label"></div>
+            <div id="questionOptions" class="options"></div>
+          </div>
+
+          <div class="nav-row">
+            <button id="backBtn" class="secondary" disabled>Back</button>
+            <button id="nextBtn" class="primary" disabled>Next</button>
+          </div>
+
+          <div id="approvalBox" class="approval-box hidden">
+            <p>Agent handoff is ready. Review the summary and approve the next step.</p>
+            <button id="approveBtn" class="primary">Approve Handoff</button>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <div class="panel-header">
+            <h2>Agent Activity</h2>
+          </div>
+          <div id="activityLog" class="activity-log"></div>
+        </aside>
+
+        <section class="panel wide">
+          <div class="panel-header">
+            <h2>Generated Study Plan</h2>
+            <button id="downloadBtn" class="secondary hidden">Download Schedule</button>
+          </div>
+          <div id="resultBox" class="result-box empty">Your final schedule will appear here.</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
